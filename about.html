@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 移动端更好的浏览的一个设置 -->
+    <meta name="viewport" content="width=device-width,initial-scal=1.0">
+    <title>关于我</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="static/css/me.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".menu.toggle").click(function () {
+                $('.m-item').toggleClass('m-moblie-hide');
+            });
+            $(".qq").popup();
+            $(".weixin").popup({
+                popup: $('.wechatQR.popup'),
+                position: 'bottom center'
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary menu stackable menu">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" class="m-item item m-moblie-hide"><i class="home icon"></i>首页</a>
+                <a href="#" class="m-item item m-moblie-hide"><i class="idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-moblie-hide"><i class="tags icon"></i>标签</a>
+                <a href="#" class="m-item item m-moblie-hide"><i class="clone icon"></i>归档</a>
+                <a href="#" class="active m-item item m-moblie-hide"><i class="info icon"></i>关于</a>
+                <div class="right m-item item m-moblie-hide">
+                    <div class="ui icon input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-moblie-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!-- 中间内容 -->
+    <div class="m-padded-tb-big">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <div class="eleven wide column">
+                    <div class="ui segment">
+                        <img src="https://unsplash.it/800/600?image=1005" alt="" class="ui rounded image">
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <div class="ui top attached segment">
+                        <div class="ui header">
+                            关于我
+                        </div>
+                        <div class="ui attached segment">
+                            <p class="m-text-thin">独立开发者</p>
+                        </div>
+                        <div class="ui attached segment">
+                            <div class="ui orange left pointing basic label">
+                                编程
+                            </div>
+                            <div class="ui orange left pointing basic label">
+                                写作
+                            </div>
+                            <div class="ui orange left pointing basic label">
+                                思考
+                            </div>
+                            <div class="ui orange left pointing basic label">
+                                运动
+                            </div>
+                        </div>
+                        <div class="ui attached segment">
+                            <div class="ui teal left pointing basic label m-margin-tb-tiny">
+                                JAVA
+                            </div>
+                            <div class="ui teal left pointing basic label m-margin-tb-tiny">
+                                C#
+                            </div>
+                            <div class="ui teal left pointing basic label m-margin-tb-tiny">
+                                JavaScript
+                            </div>
+                            <div class="ui teal left pointing basic label m-margin-tb-tiny">
+                                SqlServer
+                            </div>
+                        </div>
+                        <div class="ui bottom attached segment">
+                            <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+                            <a href="#" class="ui weixin circular icon button"><i class="weixin icon"></i></a>
+                            <a href="#" class="ui qq circular icon button" data-content="852922827"
+                                data-position="bottom center"><i class="qq icon"></i></a>
+                        </div>
+                        <div class="ui wechatQR flowing popup transition hidden" style="width: 120px;">
+                            <img src="static/img/wxqrcode.png" alt="" class="ui center rounded bordere image"
+                                style="width: 120px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided grid stackable">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted horizontal divider header">
+                            扫码关注我
+                        </h4>
+                        <div class="item ui centered">
+                            <img src="static/img/wxqrcode.png" alt="" class="ui rounded image" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">用户故事</a>
+                        <a href="" class="item">用户故事</a>
+                        <a href="" class="item">用户故事</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">联系我</h4>
+                    <div class="ui inverted link list">
+                        <p class="item m-opacity-mini">Email:852922827@qq.com</p>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">Blog</h4>
+                    <p class="m-opacity-mini">这是我的个人博客</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-opacity-mini">2021-02</p>
+        </div>
+    </footer>
+</body>
+
+</html>
