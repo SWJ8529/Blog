@@ -163,7 +163,7 @@
         // Behavior of elts with overflow: auto and padding is
         // inconsistent across browsers. This is used to ensure the
         // scrollable area is big enough.
-        d.heightForcer = elt("div", null, null, "position: absolute; height: " + scrollerGap + "px; width: 1px;");
+        d.heightForcer = elt("div", null, null, "position: absolute; height: " + scrollerGap + "px; wid 1px;");
         // Will contain the gutters, if any.
         d.gutters = elt("div", null, "CodeMirror-gutters");
         d.lineGutter = null;
@@ -393,19 +393,19 @@
         return {
             clientHeight: d.scroller.clientHeight,
             viewHeight: d.wrapper.clientHeight,
-            scrollWidth: d.scroller.scrollWidth, clientWidth: d.scroller.clientWidth,
-            viewWidth: d.wrapper.clientWidth,
+            scrollWid d.scroller.scrollWidth, clientWid d.scroller.clientWidth,
+            viewWid d.wrapper.clientWidth,
             barLeft: cm.options.fixedGutter ? gutterW : 0,
             docHeight: docH,
             scrollHeight: docH + scrollGap(cm) + d.barHeight,
-            nativeBarWidth: d.nativeBarWidth,
-            gutterWidth: gutterW
+            nativeBarWid d.nativeBarWidth,
+            gutterWid gutterW
         };
     }
 
     function NativeScrollbars(place, scroll, cm) {
         this.cm = cm;
-        var vert = this.vert = elt("div", [elt("div", null, null, "min-width: 1px")], "CodeMirror-vscrollbar");
+        var vert = this.vert = elt("div", [elt("div", null, null, "min-wid 1px")], "CodeMirror-vscrollbar");
         var horiz = this.horiz = elt("div", [elt("div", null, null, "height: 100%; min-height: 1px")], "CodeMirror-hscrollbar");
         place(vert);
         place(horiz);
@@ -843,10 +843,10 @@
         }
         return {
             fixedPos: compensateForHScroll(d),
-            gutterTotalWidth: d.gutters.offsetWidth,
+            gutterTotalWid d.gutters.offsetWidth,
             gutterLeft: left,
-            gutterWidth: width,
-            wrapperWidth: d.wrapper.clientWidth
+            gutterWid width,
+            wrapperWid d.wrapper.clientWidth
         };
     }
 
@@ -988,7 +988,7 @@
             var wrap = ensureLineWrapped(lineView);
             var gutterWrap = lineView.gutter = elt("div", null, "CodeMirror-gutter-wrapper", "left: " +
                 (cm.options.fixedGutter ? dims.fixedPos : -dims.gutterTotalWidth) +
-                "px; width: " + dims.gutterTotalWidth + "px");
+                "px; wid " + dims.gutterTotalWidth + "px");
             cm.display.input.setUneditable(gutterWrap);
             wrap.insertBefore(gutterWrap, lineView.text);
             if (lineView.line.gutterClass)
@@ -997,13 +997,13 @@
                 lineView.lineNumber = gutterWrap.appendChild(
                     elt("div", lineNumberFor(cm.options, lineN),
                         "CodeMirror-linenumber CodeMirror-gutter-elt",
-                        "left: " + dims.gutterLeft["CodeMirror-linenumbers"] + "px; width: "
+                        "left: " + dims.gutterLeft["CodeMirror-linenumbers"] + "px; wid "
                         + cm.display.lineNumInnerWidth + "px"));
             if (markers) for (var k = 0; k < cm.options.gutters.length; ++k) {
                 var id = cm.options.gutters[k], found = markers.hasOwnProperty(id) && markers[id];
                 if (found)
                     gutterWrap.appendChild(elt("div", [found], "CodeMirror-gutter-elt", "left: " +
-                        dims.gutterLeft[id] + "px; width: " + dims.gutterWidth[id] + "px"));
+                        dims.gutterLeft[id] + "px; wid " + dims.gutterWidth[id] + "px"));
             }
         }
     }
@@ -1213,8 +1213,8 @@
     };
 
     function hiddenTextarea() {
-        var te = elt("textarea", null, null, "position: absolute; padding: 0; width: 1px; height: 1em; outline: none");
-        var div = elt("div", [te], null, "overflow: hidden; position: relative; width: 3px; height: 0px;");
+        var te = elt("textarea", null, null, "position: absolute; padding: 0; wid 1px; height: 1em; outline: none");
+        var div = elt("div", [te], null, "overflow: hidden; position: relative; wid 3px; height: 0px;");
         // The textarea is kept positioned near the cursor to prevent the
         // fact that it'll be scrolled into view on input from scrolling
         // our fake cursor out of view. On webkit, when wrap=off, paste is
@@ -1485,7 +1485,7 @@
 
             var oldCSS = te.style.cssText;
             input.wrapper.style.position = "absolute";
-            te.style.cssText = "position: fixed; width: 30px; height: 30px; top: " + (e.clientY - 5) +
+            te.style.cssText = "position: fixed; wid 30px; height: 30px; top: " + (e.clientY - 5) +
                 "px; left: " + (e.clientX - 5) + "px; z-index: 1000; background: " +
                 (ie ? "rgba(255, 255, 255, .05)" : "transparent") +
                 "; outline: none; border-width: 0; outline: none; overflow: hidden; opacity: .05; filter: alpha(opacity=5);";
