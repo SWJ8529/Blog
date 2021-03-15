@@ -1,4 +1,4 @@
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
     <script>
 
     </script>
+
 </head>
 <body class="m-background-loginimg">
     <br>
@@ -29,7 +30,7 @@
                         管理后台登录
                     </div>
                 </h2>
-                <form class="ui large form" method="post" action="/admin/login">
+                <form class="ui large form" method="post" action="/admin/login" th:action="@{/admin/login}">
                     <div class="ui stacked segment">
                         <div class="field">
                             <div class="ui left icon input">

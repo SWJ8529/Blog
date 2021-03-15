@@ -19,7 +19,7 @@ public class LoginController {
     private UserService userService;
     @GetMapping()
     public String loginPage(){
-        return "index";
+        return "admin/login";
     }
     @PostMapping("/login")
     public String login(@RequestParam  String username, @RequestParam String password, HttpSession session, RedirectAttributes attributes){
