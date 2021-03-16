@@ -7,4 +7,4 @@ spring:
     static-path-pattern: /static/**
   web:
     resources:
-      static-locations: classpath:/templates/,classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+      static-locations: classpath:/web/,classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
